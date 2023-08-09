@@ -5,7 +5,8 @@ env:
   EB_PACKAGE_S3_BUCKET_NAME : "test-flask2"
   EB_APPLICATION_NAME : "test-flask2"
   EB_ENVIRONMENT_NAME : "Test-flask2-env"
-  DEPLOY_PACKAGE_NAME : "flask_app${{ github.sha}}.zip
+  DEPLOY_PACKAGE_NAME : "flask_app${{ github.sha}}.zip"
+  AWS_REGION_NAME : "eu-north-1"
 
   
 
