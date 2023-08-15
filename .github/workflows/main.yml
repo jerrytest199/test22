@@ -1,10 +1,10 @@
-name: CI-CD-Pipeline-to-AWS-ElasticBeanstalk
+name: CI-CD-Pipeline
 env:
-  EB_PACKAGE_S3_BUCKET_NAME : "zzz.flask-app"
-  EB_APPLICATION_NAME       : "MyFlask"
-  EB_ENVIRONMENT_NAME       : "MyFlask-env"
+  EB_PACKAGE_S3_BUCKET_NAME : "adv-it-flask"
+  EB_APPLICATION_NAME       : "flask-app2"
+  EB_ENVIRONMENT_NAME       : "Flask-app2-env"
   DEPLOY_PACKAGE_NAME       : "flask-app-${{ github.sha }}.zip"
-  AWS_REGION_NAME           : "us-west-2"
+  AWS_REGION_NAME           : "eu-central-1"
 
 on: 
   push:
@@ -12,7 +12,7 @@ on:
       - master
 
 jobs:
-    my_ci_pipeline:
+    pipeline:
        runs-on: ubuntu-latest
        
        steps:
@@ -60,3 +60,4 @@ jobs:
            
          - name: Print nice message on completion of CD Pipeline
            run : echo "CD Pipeline part finished successfully"  
+        
