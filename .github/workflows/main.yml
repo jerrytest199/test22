@@ -13,6 +13,8 @@ jobs:
        runs-on: ubuntu-latest
        
        steps:
+         - name: Cache
+           run: git rm --cached github-actions-part2-cicd-to-aws
          - name: Git clone our repository
            uses: actions/checkout@v3
             
