@@ -18,6 +18,11 @@ jobs:
     steps:
     - name: Print hello
       run: echo "Print hello"
+    - name: execure few commands
+      run : |
+       echo "heelo 1"
+       echo "heelo 2"
+       echo "$ {{ env.AWS_REGION_NAME }}
       
   my_test2:
     needs: my_test
