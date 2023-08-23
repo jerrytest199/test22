@@ -18,3 +18,11 @@ jobs:
     steps:
     - name: Print hello
       run: echo "Print hello"
+      
+  my_test2:
+    needs: my_test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print hello
+      run: echo "Print hello"
